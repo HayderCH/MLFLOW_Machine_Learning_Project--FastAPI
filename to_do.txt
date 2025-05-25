@@ -1,0 +1,57 @@
+Phase 1: Week 6 — Foundations
+1. Modularisation
+Refactor your xgboost.ipynb:
+Create data.py (data loading/preprocessing),
+model.py (model code),
+train.py (training logic),
+predict.py (inference logic).
+Excellence: Ensure total independence between modules (NO cross-imports unless strictly needed).
+2. CI/CD Automation
+Write a Makefile to automate:
+Linting (Pylint, Flake8, MyPy, SonarQube),
+Formatting (Black),
+Security checks (bandit, etc.),
+Tests (pytest or unittest) — even simple tests.
+Excellence:
+Add GitHub Actions workflow for CI/CD.
+Separate pipelines for data, training, etc.
+Add system or email notifications on pipeline completion.
+3. MLflow Integration
+Set up MLflow tracking in train.py:
+Log parameters, metrics, and artifacts.
+Save models to MLflow Model Registry.
+Excellence:
+Set up custom MLflow backend (local DB or remote).
+Version models and log training curves.
+Phase 2: Week 7 — Deployment & Monitoring
+4. FastAPI Model Deployment
+Build app.py exposing:
+/predict endpoint (serve xgboost model),
+/retrain endpoint (optional, for excellence).
+Add OpenAPI/Swagger documentation.
+Excellence:
+Expose retrain as a REST service.
+Try alternate frameworks (Flask, Django) in a branch.
+Try plugin/WebSocket endpoints.
+5. Dockerization
+Write a Dockerfile for FastAPI app.
+Build, test, and push image to Docker Hub.
+Run container and document how to test /predict.
+Excellence:
+Multi-container setup with Docker Compose (FastAPI + database).
+Store prediction history in DB.
+Try Swarm or Minikube if time.
+6. Monitoring
+Integrate MLflow + Elasticsearch for monitoring.
+Visualize metrics with Kibana (or alternative if not possible).
+Excellence:
+Propose monitoring for system (CPU, RAM, etc.).
+Monitor Docker/container metrics.
+Ongoing (All Phases)
+Code formatting (Black) and quality (Pylint, Flake8, MyPy).
+Write and run unit/functional tests (pytest/unittest).
+Maintain code/documentation in English (or French, as required).
+Commit regularly, keep code clean and modular.
+Checkpoints & Deliverables
+End of Week 6: Modularised code, working Makefile/CI, MLflow tracking, initial tests.
+End of Week 7: FastAPI API live (Dockerized), monitoring enabled, all documentation ready.
