@@ -1,0 +1,42 @@
+1. Modularization (Excellence)
+Ensure total independence between modules (no unnecessary cross-imports).
+Check for accidental circular imports or “god” modules.
+2. CI/CD Automation
+Required:
+
+Makefile is present, but no GitHub Actions or other CI/CD workflows detected (.github/workflows not found).
+No SonarQube or MyPy targets in Makefile (optional but recommended for excellence). Excellence:
+Multi-pipeline (data, training, API, etc.) in CI (not detected).
+Notifications on pipeline completion (system/email).
+Unit/functional tests—add more tests (only one found).
+CI/CD with GitHub Actions (add at least one workflow).
+3. MLflow Integration
+Required:
+
+Tracking and logging in train.py is present. Excellence:
+Model Registry: Ensure you use MLflow’s model registry for versioning.
+Custom MLflow backend (e.g., not the default local file store).
+Log training curves or additional artifacts.
+Automate MLflow with Docker (e.g., a docker-compose for MLflow server).
+4. FastAPI Deployment
+Required:
+
+FastAPI app expected (not detected in results due to search timeout, verify app.py exists).
+OpenAPI/Swagger doc: FastAPI does this by default if you use @app.post etc. Excellence:
+Expose a /retrain endpoint (not just /predict).
+Try alternative frameworks (Flask, Django) in a branch.
+Try plugin or WebSocket endpoints.
+5. Dockerization
+Required:
+
+Dockerfile present; you have built and published an image. Excellence:
+Multi-container setup (docker-compose) for FastAPI + DB.
+Store prediction history in a database (not seen).
+Try Swarm/Minikube (optional, for bonus).
+6. Monitoring
+Required:
+
+MLflow metrics logged.
+Elasticsearch/Kibana integration not detected. Excellence:
+Monitor system (CPU, RAM, disk), containers, etc.
+Advanced dashboards (Kibana, Grafana, etc.).

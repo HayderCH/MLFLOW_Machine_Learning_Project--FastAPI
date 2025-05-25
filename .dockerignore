@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter/IPython
+.ipynb_checkpoints
+
+# System/Mac files
+.DS_Store
+
+# Git metadata
+.git
+.gitignore
+
+# VSCode and editor settings
+.vscode/
+*.swp
+
+# Data files (if not needed in image)
+*.csv
+*.xlsx
+*.xls
+
+# Model files (if not needed in image; REMOVE if you need these in your API!)
+*.pkl
+*.joblib
+*.h5
+
+# Test files and cache
+tests/
+test/
+*.log
